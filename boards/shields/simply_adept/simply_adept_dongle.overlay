@@ -39,16 +39,16 @@
 	};
 };
 
-/* SSD1306 128x64 OLED via I2C (nice_nano: pro_micro_i2c = SDA/SCL header pins) */
+/* SH1106 128x64 OLED (1.3") via I2C (nice_nano: pro_micro_i2c) */
 &pro_micro_i2c {
     status = "okay";
 
-    oled: ssd1306@3c {
-        compatible = "solomon,ssd1306fb";
+    oled: sh1106@3c {
+        compatible = "sinowealth,sh1106";
         reg = <0x3c>;
         width = <128>;
         height = <64>;
-        segment-offset = <0>;
+        segment-offset = <2>;
         page-offset = <0>;
         display-offset = <0>;
         multiplex-ratio = <63>;
