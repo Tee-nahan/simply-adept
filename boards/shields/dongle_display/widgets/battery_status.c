@@ -102,11 +102,11 @@ static void set_battery_symbol(lv_obj_t *widget, struct battery_state state) {
 
     char battery_label = ' ';
     if (state.source == 0) {
-        battery_label = 'T';
-    } else if (state.source == 1) {
         battery_label = 'L';
-    } else if (state.source == 2) {
+    } else if (state.source == 1) {
         battery_label = 'R';
+    } else if (state.source == 2) {
+        battery_label = 'T';
     }
 
     if (battery_label != ' ') {
