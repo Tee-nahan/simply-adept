@@ -34,5 +34,6 @@ manifest:
       remote: oleksandrmaslov
       revision: main
 
+
   self:
     path: config
