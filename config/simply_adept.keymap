@@ -246,7 +246,7 @@
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             flavor = "hold-preferred";
-            bindings = <&mo 4>, <&tbl_btn4_td>;
+            bindings = <&mo 4 &tbl_btn4_td>;
         };
 
         tbl_rclk_td: tbl_rclk_td {
@@ -261,7 +261,7 @@
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             flavor = "hold-preferred";
-            bindings = <&mo 6>, <&tbl_rclk_td>;
+            bindings = <&mo 6 &tbl_rclk_td>;
         };
     };
 
