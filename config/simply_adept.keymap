@@ -234,18 +234,34 @@
             bindings = <&mo>, <&mkp>;
         };
 
-        tbl_btn4: tbl_btn4 {
+        tbl_btn4_td: tbl_btn4_td {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <250>;
-            bindings = <&kp LC(V)>, <&tog 6>;
+            bindings = <&kp LC(V)>, <&tog 5>;
+        };
+
+        tbl_btn4: tbl_btn4 {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            flavor = "hold-preferred";
+            bindings = <&mo 4>, <&tbl_btn4_td>;
+        };
+
+        tbl_rclk_td: tbl_rclk_td {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <250>;
+            bindings = <&mkp RCLK>, <&tog 7>;
         };
 
         tbl_rclk: tbl_rclk {
-            compatible = "zmk,behavior-tap-dance";
+            compatible = "zmk,behavior-hold-tap";
             #binding-cells = <0>;
-            tapping-term-ms = <250>;
-            bindings = <&lth 4 RCLK>, <&tog 5>;
+            tapping-term-ms = <200>;
+            flavor = "hold-preferred";
+            bindings = <&mo 6>, <&tbl_rclk_td>;
         };
     };
 
@@ -339,7 +355,7 @@
 
         combo_tb_bootloader {
             timeout-ms = <75>;
-            key-positions = <38 41>;
+            key-positions = <39 40>;
             bindings = <&bootloader>;
         };
 
@@ -399,7 +415,7 @@
         &trans &trans &trans &trans &trans  &trans &trans &trans &trans &trans
 &trans  &trans &trans &trans &trans &trans  &trans &trans &trans &trans &trans  &trans
                       &trans &trans &trans  &trans &trans &trans
-        &trans  &trans  &trans  &trans  &trans  &trans
+        &kp LC(LS(TAB))  &kp LC(TAB)  &trans  &trans  &trans  &trans
             >;
         };
 
@@ -414,6 +430,16 @@
         };
 
         tbl_snipe {
+            bindings = <
+        &trans &trans &trans &trans &trans  &trans &trans &trans &trans &trans
+        &trans &trans &trans &trans &trans  &trans &trans &trans &trans &trans
+&trans  &trans &trans &trans &trans &trans  &trans &trans &trans &trans &trans  &trans
+                      &trans &trans &trans  &trans &trans &trans
+        &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        tbl_snipe_h {
             bindings = <
         &trans &trans &trans &trans &trans  &trans &trans &trans &trans &trans
         &trans &trans &trans &trans &trans  &trans &trans &trans &trans &trans
