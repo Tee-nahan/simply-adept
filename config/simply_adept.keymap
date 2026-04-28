@@ -234,34 +234,27 @@
             bindings = <&mo>, <&mkp>;
         };
 
-        tbl_btn4_td: tbl_btn4_td {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <250>;
-            bindings = <&kp LC(V)>, <&tog 5>;
+        lth_kp: layer_tap_hold_kp {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            hold-while-undecided;
+            tapping-term-ms = <200>;
+            bindings = <&mo>, <&kp>;
         };
 
         tbl_btn4: tbl_btn4 {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            flavor = "hold-preferred";
-            bindings = <&mo 4 &tbl_btn4_td>;
-        };
-
-        tbl_rclk_td: tbl_rclk_td {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <250>;
-            bindings = <&mkp RCLK>, <&tog 7>;
+            bindings = <&lth_kp 4 LC(V)>, <&tog 5>;
         };
 
         tbl_rclk: tbl_rclk {
-            compatible = "zmk,behavior-hold-tap";
+            compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            flavor = "hold-preferred";
-            bindings = <&mo 6 &tbl_rclk_td>;
+            tapping-term-ms = <250>;
+            bindings = <&lth 6 RCLK>, <&tog 7>;
         };
     };
 
