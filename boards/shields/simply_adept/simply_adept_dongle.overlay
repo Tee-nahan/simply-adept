@@ -31,7 +31,7 @@
             <&zip_xy_to_scroll_mapper>;
 	};
 	snipe {
-		layers = <6>; // tbl_snipe
+		layers = <6 7>; // tbl_snipe (momentary), tbl_snipe_h (toggle)
 		input-processors =
             <&zip_zxy>,
             <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP)>,
