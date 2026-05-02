@@ -243,17 +243,24 @@
             bindings = <&mo>, <&kp>;
         };
 
+        tbl_btn1: tbl_btn1 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <150>;
+            bindings = <&kp LC(C)>, <&tog 5>;
+        };
+
         tbl_btn4: tbl_btn4 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <250>;
-            bindings = <&lth_kp 4 LC(V)>, <&tog 5>;
+            tapping-term-ms = <150>;
+            bindings = <&lth_kp 9 C_AC_BACK>, <&kp DEL>;
         };
 
         tbl_rclk: tbl_rclk {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <150>;
             bindings = <&lth 6 RCLK>, <&tog 7>;
         };
     };
@@ -366,9 +373,9 @@
             bindings = <
         &kp Q  &kp W       &kp E         &mm_r_alt_f4   &kp T           &td_y_hanja  &td_u_layer1  &td_i_layer2     &kp O          &kp P
         &kp A  &hm LALT S  &hm LCTRL D   &hm LSHIFT F   &kp G           &td_h_caps   &td_j_ralt    &kp K            &kp L          &kp SEMI
-&tog 2  &kp Z  &kp X       &kp C         &mm_alt_v_as_s &kp B           &kp N        &kp M         &kp COMMA        &mm_dot_qmark  &mt RSHIFT FSLH  &tog 1
+&tog 5  &kp Z  &kp X       &kp C         &mm_alt_v_as_s &kp B           &kp N        &kp M         &kp COMMA        &mm_dot_qmark  &mt RSHIFT FSLH  &tog 1
                             &mt_lgui_esc LGUI 0  &mm_lt_bspc_lsft  &mt LALT TAB  &mm_ralt_perm_del  &lt 1 ENTER  &mm_space_shift
-        &mkp MB4  &mkp MB5  &kp LC(C)  &tbl_btn4  &mkp LCLK  &tbl_rclk
+        &tbl_btn1  &kp LC(V)  &lth_kp 8 C_AC_FORWARD  &tbl_btn4  &mkp LCLK  &tbl_rclk
             >;
         };
 
@@ -408,7 +415,7 @@
         &trans &trans &trans &trans &trans  &trans &trans &trans &trans &trans
 &trans  &trans &trans &trans &trans &trans  &trans &trans &trans &trans &trans  &trans
                       &trans &trans &trans  &trans &trans &trans
-        &kp LC(LS(TAB))  &kp LC(TAB)  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
 
@@ -439,6 +446,26 @@
 &trans  &trans &trans &trans &trans &trans  &trans &trans &trans &trans &trans  &trans
                       &trans &trans &trans  &trans &trans &trans
         &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        tbl_nav_3h {
+            bindings = <
+        &trans &trans &trans &trans &trans  &trans &trans &trans &trans &trans
+        &trans &trans &trans &trans &trans  &trans &trans &trans &trans &trans
+&trans  &trans &trans &trans &trans &trans  &trans &trans &trans &trans &trans  &trans
+                      &trans &trans &trans  &trans &trans &trans
+        &trans  &trans  &trans  &kp LC(TAB)  &trans  &trans
+            >;
+        };
+
+        tbl_nav_4h {
+            bindings = <
+        &trans &trans &trans &trans &trans  &trans &trans &trans &trans &trans
+        &trans &trans &trans &trans &trans  &trans &trans &trans &trans &trans
+&trans  &trans &trans &trans &trans &trans  &trans &trans &trans &trans &trans  &trans
+                      &trans &trans &trans  &trans &trans &trans
+        &trans  &trans  &kp LC(LS(TAB))  &trans  &trans  &trans
             >;
         };
     };
