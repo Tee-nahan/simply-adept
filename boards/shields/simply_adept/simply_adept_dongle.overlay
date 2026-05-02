@@ -23,7 +23,7 @@
         <&zip_zxy>, // decompressor by badjeff. This needs to be at the head of the pipeline.
         <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP)>;
 	scroll {
-		layers = <4 5>; // tbl_scroll_m (momentary), tbl_scroll_h (toggle)
+		layers = <4 5 9>; // tbl_scroll_m (momentary), tbl_scroll_h (toggle), tbl_nav_4h (btn4 hold)
 		input-processors =
             <&zip_zxy>,
             <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_Y_INVERT)>,
