@@ -341,9 +341,21 @@
         };
 
         /* Trackball combos */
+        combo_tb_close {
+            timeout-ms = <75>;
+            key-positions = <38 39>;
+            bindings = <&kp LC(W)>;
+        };
+
         combo_tb_refresh {
             timeout-ms = <75>;
             key-positions = <40 41>;
+            bindings = <&kp ENTER>;
+        };
+
+        combo_tb_refresh {
+            timeout-ms = <75>;
+            key-positions = <41 42>;
             bindings = <&kp F5>;
         };
 
