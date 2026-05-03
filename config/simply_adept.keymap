@@ -347,7 +347,7 @@
             bindings = <&kp LC(W)>;
         };
 
-        combo_tb_refresh {
+        combo_tb_enter {
             timeout-ms = <75>;
             key-positions = <40 41>;
             bindings = <&kp ENTER>;
