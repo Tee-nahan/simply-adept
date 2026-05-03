@@ -341,10 +341,10 @@
         };
 
         /* Trackball combos */
-        combo_tb_rclk {
+        combo_tb_refresh {
             timeout-ms = <75>;
             key-positions = <40 41>;
-            bindings = <&mkp RCLK>;
+            bindings = <&kp F5>;
         };
 
         combo_tb_bootloader {
