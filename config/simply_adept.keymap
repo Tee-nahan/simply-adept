@@ -347,16 +347,22 @@
             bindings = <&kp LC(W)>;
         };
 
-        combo_tb_enter {
+        combo_tb_close34 {
             timeout-ms = <75>;
             key-positions = <40 41>;
-            bindings = <&kp ENTER>;
+            bindings = <&kp LC(W)>;
         };
 
         combo_tb_refresh {
             timeout-ms = <75>;
             key-positions = <41 42>;
             bindings = <&kp F5>;
+        };
+
+        combo_tb_enter {
+            timeout-ms = <75>;
+            key-positions = <41 43>;
+            bindings = <&kp ENTER>;
         };
 
         combo_tb_bootloader {
