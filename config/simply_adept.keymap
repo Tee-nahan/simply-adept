@@ -344,7 +344,7 @@
         combo_tb_close {
             timeout-ms = <75>;
             key-positions = <38 39>;
-            bindings = <&kp LC(W)>;
+            bindings = <&kp LA(F4)>;
         };
 
         combo_tb_close34 {
