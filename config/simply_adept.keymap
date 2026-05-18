@@ -249,7 +249,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <250>;
-            bindings = <&lth 6 RCLK>, <&tog 7>;
+            bindings = <&mkp RCLK>, <&tog 7>;
         };
     };
 
@@ -381,7 +381,7 @@
         &kp A  &hm LALT S  &hm LCTRL D   &hm LSHIFT F   &kp G           &td_h_caps   &td_j_ralt    &kp K            &kp L          &kp SEMI
 &tog 5  &kp Z  &kp X       &kp C         &mm_alt_v_as_s &kp B           &kp N        &kp M         &kp COMMA        &mm_dot_qmark  &mt RSHIFT FSLH  &tog 1
                             &mt_lgui_esc LGUI 0  &mm_lt_bspc_lsft  &mt LALT TAB  &mm_ralt_perm_del  &lt 1 ENTER  &mm_space_shift
-        &kp LC(C)  &kp LC(V)  &lth_kp 8 LA(RIGHT)  &lth_kp 9 LA(LEFT)  &mkp LCLK  &tbl_rclk
+        &kp LC(C)  &kp LC(V)  &lth_kp 6 LA(RIGHT)  &lth_kp 9 LA(LEFT)  &mkp LCLK  &tbl_rclk
             >;
         };
 
@@ -441,7 +441,7 @@
         &trans &trans &trans &trans &trans  &trans &trans &trans &trans &trans
 &trans  &trans &trans &trans &trans &trans  &trans &trans &trans &trans &trans  &trans
                       &trans &trans &trans  &trans &trans &trans
-        &trans  &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &kp LC(TAB)  &trans  &trans
             >;
         };
 
