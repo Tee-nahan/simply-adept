@@ -75,17 +75,17 @@
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <170>;
+            tapping-term-ms = <185>;
             quick-tap-ms = <0>;
             flavor = "tap-preferred";
-            require-prior-idle-ms = <170>;
+            require-prior-idle-ms = <185>;
             bindings = <&kp>, <&kp>;
         };
 
         hs: homerow_shift {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <170>;
+            tapping-term-ms = <185>;
             quick-tap-ms = <0>;
             flavor = "balanced";
             require-prior-idle-ms = <0>;
