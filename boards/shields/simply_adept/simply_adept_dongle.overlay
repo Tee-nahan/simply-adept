@@ -35,7 +35,7 @@
 		input-processors =
             <&zip_zxy>,
             <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP)>,
-            <&zip_xy_scaler 5 16>;
+            <&zip_xy_scaler 5 21>;
 	};
 };
 
