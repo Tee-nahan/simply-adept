@@ -1,0 +1,74 @@
+// Can't have the kscan0 here, that one's physical
+/* 
+    Central side is the only one that is aware of .keymap,
+    so put all input processors you want to take effect in input listener here.
+*/
+
+#include "split_input.dtsi"
+#include "simply_adept.dtsi"
+#include "simply_adept-layouts.dtsi"
+#include <input/processors.dtsi>
+#include <input/processors/xyz.dtsi>
+#include <dt-bindings/zmk/input_transform.h>
+
+&physical_layout0 {
+    transform = <&default_transform>;
+};
+
+/* local trackball input split device child node, receiving events from the peripheral and raising them locally. */
+// look into <split_input.dtsi> for mother node.
+&trackball_split_listener {
+	status = "okay";
+    input-processors =
+        <&zip_zxy>, // decompressor by badjeff. This needs to be at the head of the pipeline.
+        <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP)>;
+	scroll {
+		layers = <4 5 9>; // tbl_scroll_m (momentary), tbl_scroll_h (toggle), tbl_nav_4h (btn4 hold)
+		input-processors =
+            <&zip_zxy>,
+            <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_Y_INVERT)>,
+            <&zip_xy_scaler 3 40>,
+            <&zip_xy_to_scroll_mapper>;
+	};
+	snipe {
+		layers = <6 7>; // tbl_snipe (momentary), tbl_snipe_h (toggle)
+		input-processors =
+            <&zip_zxy>,
+            <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP)>,
+            <&zip_xy_scaler 20 77>;
+	};
+};
+
+/* SH1106 128x64 OLED (1.3") via I2C (nice_nano: pro_micro_i2c) */
+&pro_micro_i2c {
+    status = "okay";
+
+    oled: sh1106@3c {
+        compatible = "sinowealth,sh1106";
+        reg = <0x3c>;
+        width = <128>;
+        height = <64>;
+        segment-offset = <2>;
+        page-offset = <0>;
+        display-offset = <0>;
+        multiplex-ratio = <63>;
+        segment-remap;
+        com-invdir;
+        prechargep = <0x22>;
+    };
+};
+
+/ {
+    chosen {
+        zmk,kscan = &mock_kscan;
+        zmk,physical-layout = &physical_layout0;
+        zephyr,display = &oled;
+    };
+
+    mock_kscan: mock_kscan0 {
+        compatible = "zmk,kscan-mock";
+        columns = <0>;
+        rows = <0>;
+        events = <0>;
+    };
+};
