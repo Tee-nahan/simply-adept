@@ -85,8 +85,8 @@
         hs: homerow_shift {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <185>;
-            quick-tap-ms = <0>;
+            tapping-term-ms = <170>;
+            quick-tap-ms = <170>;
             flavor = "balanced";
             require-prior-idle-ms = <0>;
             bindings = <&kp>, <&kp>;
@@ -203,13 +203,6 @@
             mods = <(MOD_RSFT)>;
         };
 
-        mm_ralt_perm_del: mod_morph_ralt_perm_del {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp RALT>, <&kp LS(DEL)>;
-            mods = <(MOD_RSFT)>;
-        };
-
         mm_lt_bspc_lsft: mm_lt_bspc_lsft {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
@@ -223,15 +216,6 @@
             bindings = <&kp V>, <&kp S>;
             mods = <(MOD_LALT)>;
             keep-mods = <(MOD_LALT)>;
-        };
-
-        lth: layer_tap_hold {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "hold-preferred";
-            hold-while-undecided;
-            tapping-term-ms = <150>;
-            bindings = <&mo>, <&mkp>;
         };
 
         lth_kp: layer_tap_hold_kp {
@@ -256,9 +240,9 @@
     combos {
         compatible = "zmk,combos";
 
-        combo_kl_ralt {
+        combo_uo_haneng {
             timeout-ms = <75>;
-            key-positions = <17 18>;
+            key-positions = <6 8>;
             bindings = <&kp RALT>;
         };
 
@@ -295,12 +279,6 @@
         combo_xv_enter {
             timeout-ms = <75>;
             key-positions = <22 24>;
-            bindings = <&kp ENTER>;
-        };
-
-        combo_vb_enter {
-            timeout-ms = <75>;
-            key-positions = <24 25>;
             bindings = <&kp ENTER>;
         };
 
@@ -379,9 +357,9 @@
             bindings = <
         &kp Q  &kp W       &kp E         &mm_r_alt_f4   &kp T           &td_y_hanja  &td_u_layer1  &td_i_layer2     &kp O          &kp P
         &kp A  &hm LALT S  &hm LCTRL D   &hm LSHIFT F   &kp G           &td_h_caps   &td_j_ralt    &kp K            &kp L          &kp SEMI
-&tog 5  &kp Z  &kp X       &kp C         &mm_alt_v_as_s &kp B           &kp N        &kp M         &kp COMMA        &mm_dot_qmark  &mt RSHIFT FSLH  &tog 1
-                            &mt_lgui_esc LGUI 0  &mm_lt_bspc_lsft  &mt LALT TAB  &mm_ralt_perm_del  &lt 1 ENTER  &mm_space_shift
-        &kp LC(C)  &kp LC(V)  &lth_kp 6 LA(RIGHT)  &lth_kp 9 LA(LEFT)  &mkp LCLK  &tbl_rclk
+&tog 5  &kp Z  &kp X       &kp C         &mm_alt_v_as_s &kp B           &kp N        &kp M         &kp COMMA        &mm_dot_qmark  &hs RSHIFT FSLH  &tog 1
+                            &mt_lgui_esc LGUI 0  &mm_lt_bspc_lsft  &mt LALT TAB  &kp DEL  &lt 1 ENTER  &mm_space_shift
+        &kp DEL  &kp ENTER  &lth_kp 6 LA(RIGHT)  &lth_kp 9 LA(LEFT)  &mkp LCLK  &tbl_rclk
             >;
         };
 
