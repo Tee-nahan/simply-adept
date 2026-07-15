@@ -358,7 +358,7 @@
         &kp Q  &kp W       &kp E         &mm_r_alt_f4   &kp T           &td_y_hanja  &td_u_layer1  &td_i_layer2     &kp O          &kp P
         &kp A  &hm LALT S  &hm LCTRL D   &hm LSHIFT F   &kp G           &td_h_caps   &td_j_ralt    &kp K            &kp L          &kp SEMI
 &tog 5  &kp Z  &kp X       &kp C         &mm_alt_v_as_s &kp B           &kp N        &kp M         &kp COMMA        &mm_dot_qmark  &hs RSHIFT FSLH  &tog 1
-                            &mt_lgui_esc LGUI 0  &mm_lt_bspc_lsft  &mt LALT TAB  &kp DEL  &lt 1 ENTER  &mm_space_shift
+                            &mt_lgui_esc LGUI 0  &mm_lt_bspc_lsft  &mt LALT TAB  &kp RALT  &lt 1 ENTER  &mm_space_shift
         &kp DEL  &kp ENTER  &lth_kp 6 LA(RIGHT)  &lth_kp 9 LA(LEFT)  &mkp LCLK  &tbl_rclk
             >;
         };
@@ -368,7 +368,7 @@
             &kp EXCL   &kp AT    &kp HASH  &kp DLLR       &kp PRCNT           &kp HOME  &kp PG_UP  &kp UP           &kp PG_DN  &kp PSCRN
             &kp CARET  &kp AMPS  &kp STAR  &kp LPAR       &kp RPAR            &kp END   &kp LEFT   &kp DOWN         &kp RIGHT  &kp INS
 &to 2       &kp Z      &kp X     &kp C     &kp LESS_THAN  &kp GREATER_THAN    &mkp LCLK &kp LA(LEFT)  &kp LA(RIGHT)  &kp DOT  &kp FSLH  &tog 1
-                                 &mt_lgui_esc LGUI 0  &mm_lt_bspc_lsft  &mt LALT TAB  &kp DEL  &kp ENTER  &mm_space_shift
+                                 &mt_lgui_esc LGUI 0  &mm_lt_bspc_lsft  &mt LALT TAB  &kp RALT  &kp ENTER  &mm_space_shift
         &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
@@ -378,7 +378,7 @@
         &kp LG(N1)   &kp LG(N2)  &kp LG(N3)  &kp LG(N4)  &kp LG(N5)   &kp UNDER  &kp N7  &kp N8  &kp N9  &kp EQUAL
         &open_dq     &close_dq   &open_sq    &close_sq   &td_quoute   &kp MINUS  &kp N4  &kp N5  &kp N6  &kp PLUS
 &tog 2  &kp LC(F10)  &kp F7      &kp F5      &kp F2      &simple371   &kp N0     &kp N1  &kp N2  &kp N3  &kp DOT  &to 1
-                                 &mt_lgui_esc LGUI 0  &mm_bspc_lsft  &mt LALT TAB  &kp DEL  &lt 1 ENTER  &mm_space_shift
+                                 &mt_lgui_esc LGUI 0  &mm_bspc_lsft  &mt LALT TAB  &kp RALT  &lt 1 ENTER  &mm_space_shift
         &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
