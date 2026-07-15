@@ -87,7 +87,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <170>;
             quick-tap-ms = <80>;
-            flavor = "balanced";
+            flavor = "hold-preferred";
             require-prior-idle-ms = <0>;
             bindings = <&kp>, <&kp>;
         };
@@ -200,6 +200,13 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&mm_space_ralt>, <&kp DEL>;
+            mods = <(MOD_RSFT)>;
+        };
+
+        mm_ralt_del: mod_morph_ralt_del {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp RALT>, <&kp DEL>;
             mods = <(MOD_RSFT)>;
         };
 
@@ -372,7 +379,7 @@
         &kp Q  &kp W       &kp E         &mm_r_alt_f4   &kp T           &td_y_hanja  &td_u_layer1  &td_i_layer2     &kp O          &kp P
         &kp A  &hm LALT S  &hm LCTRL D   &hm LSHIFT F   &kp G           &td_h_caps   &td_j_ralt    &kp K            &kp L          &kp SEMI
 &tog 5  &kp Z  &kp X       &kp C         &mm_alt_v_as_s &kp B           &kp N        &kp M         &kp COMMA        &mm_dot_qmark  &hs RSHIFT FSLH  &tog 1
-                            &mt_lgui_esc LGUI 0  &mm_lt_bspc_lsft  &mt LALT TAB  &kp RALT  &lt 1 ENTER  &mm_space_shift
+                            &mt_lgui_esc LGUI 0  &mm_lt_bspc_lsft  &mt LALT TAB  &mm_ralt_del  &lt 1 ENTER  &mm_space_shift
         &kp DEL  &kp ENTER  &tbl_lth 8 LA(RIGHT)  &tbl_lth 9 LA(LEFT)  &mkp LCLK  &tbl_rclk
             >;
         };
