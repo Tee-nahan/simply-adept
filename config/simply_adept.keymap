@@ -227,7 +227,14 @@
             bindings = <&mo>, <&kp>;
         };
 
-
+        tbl_lth: trackball_layer_tap_hold {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            hold-while-undecided;
+            tapping-term-ms = <200>;
+            bindings = <&mo>, <&kp>;
+        };
 
         tbl_rclk: tbl_rclk {
             compatible = "zmk,behavior-tap-dance";
@@ -317,36 +324,42 @@
             timeout-ms = <75>;
             key-positions = <38 39>;
             bindings = <&kp LA(F4)>;
+            layers = <0>;
         };
 
         combo_tb_close34 {
             timeout-ms = <75>;
             key-positions = <40 41>;
             bindings = <&kp LC(W)>;
+            layers = <0>;
         };
 
         combo_tb_scroll_tog {
             timeout-ms = <75>;
             key-positions = <41 42>;
             bindings = <&tog 5>;
+            layers = <0>;
         };
 
         combo_tb_enter {
             timeout-ms = <75>;
             key-positions = <41 43>;
             bindings = <&kp ENTER>;
+            layers = <0>;
         };
 
         combo_tb_bootloader {
             timeout-ms = <75>;
             key-positions = <39 40>;
             bindings = <&bootloader>;
+            layers = <0>;
         };
 
         combo_ble_reset {
             timeout-ms = <150>;
             key-positions = <38 39 40 41>;
             bindings = <&bt BT_CLR>;
+            layers = <0>;
         };
     };
 
@@ -359,7 +372,7 @@
         &kp A  &hm LALT S  &hm LCTRL D   &hm LSHIFT F   &kp G           &td_h_caps   &td_j_ralt    &kp K            &kp L          &kp SEMI
 &tog 5  &kp Z  &kp X       &kp C         &mm_alt_v_as_s &kp B           &kp N        &kp M         &kp COMMA        &mm_dot_qmark  &hs RSHIFT FSLH  &tog 1
                             &mt_lgui_esc LGUI 0  &mm_lt_bspc_lsft  &mt LALT TAB  &kp RALT  &lt 1 ENTER  &mm_space_shift
-        &kp DEL  &kp ENTER  &lth_kp 6 LA(RIGHT)  &lth_kp 9 LA(LEFT)  &mkp LCLK  &tbl_rclk
+        &kp DEL  &kp ENTER  &tbl_lth 8 LA(RIGHT)  &tbl_lth 9 LA(LEFT)  &mkp LCLK  &tbl_rclk
             >;
         };
 
