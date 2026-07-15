@@ -230,9 +230,10 @@
         tbl_lth: trackball_layer_tap_hold {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "balanced";
+            flavor = "hold-preferred";
             hold-while-undecided;
-            tapping-term-ms = <200>;
+            retro-tap;
+            tapping-term-ms = <135>;
             bindings = <&mo>, <&kp>;
         };
 
@@ -321,35 +322,35 @@
 
         /* Trackball combos */
         combo_tb_close {
-            timeout-ms = <75>;
+            timeout-ms = <50>;
             key-positions = <38 39>;
             bindings = <&kp LA(F4)>;
             layers = <0>;
         };
 
         combo_tb_close34 {
-            timeout-ms = <75>;
+            timeout-ms = <50>;
             key-positions = <40 41>;
             bindings = <&kp LC(W)>;
             layers = <0>;
         };
 
         combo_tb_scroll_tog {
-            timeout-ms = <75>;
+            timeout-ms = <50>;
             key-positions = <41 42>;
             bindings = <&tog 5>;
             layers = <0>;
         };
 
         combo_tb_enter {
-            timeout-ms = <75>;
+            timeout-ms = <50>;
             key-positions = <41 43>;
             bindings = <&kp ENTER>;
             layers = <0>;
         };
 
         combo_tb_bootloader {
-            timeout-ms = <75>;
+            timeout-ms = <50>;
             key-positions = <39 40>;
             bindings = <&bootloader>;
             layers = <0>;
