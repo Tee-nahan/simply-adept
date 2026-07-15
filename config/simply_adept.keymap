@@ -239,8 +239,7 @@
             #binding-cells = <2>;
             flavor = "hold-preferred";
             hold-while-undecided;
-            retro-tap;
-            tapping-term-ms = <135>;
+            tapping-term-ms = <160>;
             bindings = <&mo>, <&kp>;
         };
 
