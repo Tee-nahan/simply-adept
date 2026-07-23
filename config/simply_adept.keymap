@@ -240,7 +240,7 @@
             flavor = "hold-preferred";
             hold-while-undecided;
             tapping-term-ms = <160>;
-            bindings = <&mo>, <&kp>;
+            bindings = <&mo>, <&mkp>;
         };
 
         tbl_rclk: tbl_rclk {
@@ -379,13 +379,13 @@
         &kp A  &hm LALT S  &hm LCTRL D   &hm LSHIFT F   &kp G           &td_h_caps   &td_j_ralt    &kp K            &kp L          &kp SEMI
 &tog 5  &kp Z  &kp X       &kp C         &mm_alt_v_as_s &kp B           &kp N        &kp M         &kp COMMA        &mm_dot_qmark  &hs RSHIFT FSLH  &tog 1
                             &mt_lgui_esc LGUI 0  &mm_lt_bspc_lsft  &mt LALT TAB  &mm_ralt_del  &lt 1 ENTER  &mm_space_shift
-        &kp DEL  &kp ENTER  &tbl_lth 8 LA(RIGHT)  &tbl_lth 9 LA(LEFT)  &mkp LCLK  &tbl_rclk
+        &kp DEL  &kp ENTER  &tbl_lth 8 MB5  &tbl_lth 9 MB4  &mkp LCLK  &tbl_rclk
             >;
         };
 
         layer_1 {
             bindings = <
-            &kp EXCL   &kp AT    &kp HASH  &kp DLLR       &kp PRCNT           &kp HOME  &kp PG_UP  &kp UP           &kp PG_DN  &kp PSCRN
+            &kp EXCL   &kp AT    &kp HASH  &kp DLLR       &kp PRCNT           &kp HOME  &kp PG_UP  &kp UP           &kp PG_DN  &kp LG(LS(S))
             &kp CARET  &kp AMPS  &kp STAR  &kp LPAR       &kp RPAR            &kp END   &kp LEFT   &kp DOWN         &kp RIGHT  &kp INS
 &to 2       &kp Z      &kp X     &kp C     &kp LESS_THAN  &kp GREATER_THAN    &mkp LCLK &kp LA(LEFT)  &kp LA(RIGHT)  &kp DOT  &kp FSLH  &tog 1
                                  &mt_lgui_esc LGUI 0  &mm_lt_bspc_lsft  &mt LALT TAB  &kp RALT  &kp ENTER  &mm_space_shift
