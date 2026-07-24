@@ -182,12 +182,7 @@
             bindings = <&kp Y>, <&kp LANG_HANJA>;
         };
 
-        td_i_layer2: td_i_layer2 {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <210>;
-            bindings = <&kp I>, <&tog 2>;
-        };
+
 
         td_quoute: td_quoute {
             compatible = "zmk,behavior-tap-dance";
@@ -375,11 +370,11 @@
 
         base {
             bindings = <
-        &kp Q  &kp W       &kp E         &mm_r_alt_f4   &kp T           &td_y_hanja  &td_u_layer1  &td_i_layer2     &kp O          &kp P
+        &kp Q  &kp W       &kp E         &mm_r_alt_f4   &kp T           &td_y_hanja  &td_u_layer1  &kp I            &kp O          &kp P
         &kp A  &hm LALT S  &hm LCTRL D   &hm LSHIFT F   &kp G           &td_h_caps   &td_j_ralt    &kp K            &kp L          &kp SEMI
 &tog 5  &kp Z  &kp X       &kp C         &mm_alt_v_as_s &kp B           &kp N        &kp M         &kp COMMA        &mm_dot_qmark  &hs RSHIFT FSLH  &tog 1
                             &mt_lgui_esc LGUI 0  &mm_lt_bspc_lsft  &mt LALT TAB  &mm_ralt_del  &lt 1 ENTER  &mm_space_shift
-        &kp DEL  &kp ENTER  &tbl_lth 8 MB5  &tbl_lth 9 MB4  &mkp LCLK  &tbl_rclk
+        &kp DEL  &kp LC(C)  &tbl_lth 8 MB5  &tbl_lth 9 MB4  &mkp LCLK  &tbl_rclk
             >;
         };
 
@@ -474,12 +469,4 @@
         };
     };
 
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-
-        device {
-            if-layers = <1 2>;
-            then-layer = <3>;
-        };
-    };
 };
