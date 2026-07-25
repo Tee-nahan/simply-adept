@@ -211,7 +211,7 @@
 
         hold_mo_en: hold_mo_en {
             compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <0>;
+            #binding-cells = <2>;
             flavor = "hold-preferred";
             hold-while-undecided;
             tapping-term-ms = <0>;
@@ -221,7 +221,7 @@
         mm_mo_en_del: mod_morph_mo_en_del {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&hold_mo_en>, <&kp DEL>;
+            bindings = <&hold_mo_en 0 0>, <&kp DEL>;
             mods = <(MOD_RSFT)>;
         };
 
