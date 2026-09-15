@@ -84,29 +84,23 @@
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <185>;
+            tapping-term-ms = <210>;
             quick-tap-ms = <0>;
             flavor = "tap-preferred";
-            require-prior-idle-ms = <185>;
+            require-prior-idle-ms = <210>;
             bindings = <&kp>, <&kp>;
         };
 
         hs: homerow_shift {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <170>;
+            tapping-term-ms = <195>;
             quick-tap-ms = <80>;
             flavor = "hold-preferred";
-            require-prior-idle-ms = <0>;
+            require-prior-idle-ms = <150>;
             bindings = <&kp>, <&kp>;
         };
 
-        mm_space_ralt: mod_morph_space_ralt {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp SPACE>, <&kp DEL>;
-            mods = <(MOD_RSFT)>;
-        };
 
         mm_r_alt_f4: mod_morph_r_alt_f4 {
             compatible = "zmk,behavior-mod-morph";
@@ -194,10 +188,10 @@
             bindings = <&kp SINGLE_QUOTE>, <&kp DOUBLE_QUOTES>;
         };
 
-        mm_space_shift: mod_morph_space_shift {
+        mm_ralt_shift: mod_morph_ralt_shift {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&mm_space_ralt>, <&kp DEL>;
+            bindings = <&kp RALT>, <&kp DEL>;
             mods = <(MOD_RSFT)>;
         };
 
@@ -207,7 +201,7 @@
             flavor = "hold-preferred";
             hold-while-undecided;
             tapping-term-ms = <0>;
-            bindings = <&mo_en>, <&none>;
+            bindings = <&mo_en>, <&kp ENTER>;
         };
 
         mm_mo_en_del: mod_morph_mo_en_del {
@@ -385,7 +379,7 @@
         &kp Q  &kp W       &kp E         &mm_r_alt_f4   &kp T           &td_y_hanja  &kp U         &kp I            &kp O          &kp P
         &kp A  &hm LALT S  &hm LCTRL D   &hm LSHIFT F   &kp G           &td_h_caps   &td_j_ralt    &kp K            &kp L          &kp SEMI
 &tog 5  &kp Z  &kp X       &kp C         &mm_alt_v_as_s &kp B           &kp N        &kp M         &kp COMMA        &mm_dot_qmark  &hs RSHIFT FSLH  &tog 1
-                            &mt_lgui_esc LGUI 0  &mm_lt_bspc_lsft  &mt LALT TAB  &mm_mo_en_del  &lt 1 ENTER  &mm_space_shift
+                            &mt_lgui_esc LGUI 0  &mm_lt_bspc_lsft  &mt LALT TAB  &mm_mo_en_del  &lt 1 SPACE  &mm_ralt_shift
         &kp DEL  &kp LC(C)  &tbl_lth 8 MB5  &tbl_lth 9 MB4  &mkp LCLK  &tbl_rclk
             >;
         };
@@ -395,7 +389,7 @@
             &kp EXCL   &kp AT    &kp HASH  &kp DLLR       &kp PRCNT           &kp HOME  &kp PG_UP  &kp UP           &kp PG_DN  &kp LG(LS(S))
             &kp CARET  &kp AMPS  &kp STAR  &kp LPAR       &kp RPAR            &kp END   &kp LEFT   &kp DOWN         &kp RIGHT  &kp INS
 &to 2       &kp Z      &kp X     &kp C     &kp LESS_THAN  &kp GREATER_THAN    &mkp LCLK &kp LA(LEFT)  &kp LA(RIGHT)  &kp DOT  &kp FSLH  &tog 1
-                                 &mt_lgui_esc LGUI 0  &mm_lt_bspc_lsft  &mt LALT TAB  &kp RALT  &kp ENTER  &mm_space_shift
+                                 &mt_lgui_esc LGUI 0  &mm_lt_bspc_lsft  &mt LALT TAB  &kp ENTER  &kp SPACE  &mm_ralt_shift
         &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
@@ -405,7 +399,7 @@
         &kp LG(N1)   &kp LG(N2)  &kp LG(N3)  &kp LG(N4)  &kp LG(N5)   &kp UNDER  &kp N7  &kp N8  &kp N9  &kp EQUAL
         &open_dq     &close_dq   &open_sq    &close_sq   &td_quoute   &kp MINUS  &kp N4  &kp N5  &kp N6  &kp PLUS
 &tog 2  &kp LC(F10)  &kp F7      &kp F5      &kp F2      &simple371   &kp N0     &kp N1  &kp N2  &kp N3  &kp DOT  &to 1
-                                 &mt_lgui_esc LGUI 0  &mm_bspc_lsft  &mt LALT TAB  &kp RALT  &lt 1 ENTER  &mm_space_shift
+                                 &mt_lgui_esc LGUI 0  &mm_bspc_lsft  &mt LALT TAB  &kp ENTER  &lt 1 SPACE  &mm_ralt_shift
         &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
