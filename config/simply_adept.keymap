@@ -244,12 +244,6 @@
             bindings = <&mo>, <&mkp>;
         };
 
-        tbl_rclk: tbl_rclk {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <250>;
-            bindings = <&mkp RCLK>, <&tog 7>;
-        };
     };
 
     combos {
@@ -380,7 +374,7 @@
         &kp A  &hm LALT S  &hm LCTRL D   &hm LSHIFT F   &kp G           &td_h_caps   &td_j_ralt    &kp K            &kp L          &kp SEMI
 &tog 5  &kp Z  &kp X       &kp C         &mm_alt_v_as_s &kp B           &kp N        &kp M         &kp COMMA        &mm_dot_qmark  &hs RSHIFT FSLH  &tog 1
                             &mt_lgui_esc LGUI 0  &mm_lt_bspc_lsft  &mt LALT TAB  &hold_mo_en 0 0  &lt 1 SPACE  &mm_ralt_shift
-        &kp DEL  &kp LC(C)  &tbl_lth 8 MB5  &tbl_lth 9 MB4  &mkp LCLK  &tbl_rclk
+        &kp DEL  &kp LC(C)  &tbl_lth 8 MB5  &tbl_lth 9 MB4  &mkp LCLK  &mkp RCLK
             >;
         };
 
